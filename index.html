@@ -1,53 +1,60 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="UTF-8">
-  <title>Simon Game</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link href='https://fonts.googleapis.com/css?family=Original+Surfer&effect=emboss' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/style.css">
-
-  <audio id="clip1">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source>
-  </audio>
-  <audio id="clip2">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source>
-  </audio>
-  <audio id="clip3">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source>
-  </audio>
-  <audio id="clip4">
-  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source>
-  </audio>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Popular Game is Back. Now in Web.</title>
+	<link rel="stylesheet" type="text/css" href="CSS/Style.css">
 </head>
-
 <body>
+	<div id="main-container">
+		<div id="play-block">
+			<div id="btn-block1" class="quarter-block"></div>
+			<div id="btn-block2" class="quarter-block"></div>
+			<div id="btn-block3" class="quarter-block"></div>
+			<div id="btn-block4" class="quarter-block"></div>
+			<div id="menuPanel">
+				<div id="nameHeader">
+					<div class="abs">
+						<svg height="40%" width="100%">
+							<circle cx="50%" cy="125%" r="55%"  fill="black" />
+						</svg>
+					</div>
+					<div id="Gamelogo" class="abs">
+						<p>SIMON</p>
+					</div>
+				</div>
 
-  <div id="outer-circle">
-    <div id="topleft"></div>
-    <div id="topright"></div>
-    <div id="bottomleft"></div>
-    <div id="bottomright"></div>
-    <div id="inner-circle">
-      <div id="title" class="font-effect-emboss">SIMON!</div>
-      <div id="switches">
-        <input type="checkbox" class="toggle" id="on">
-        <button class="button" id="start">Start</button>
-        <input type="checkbox" class="toggle" id="strict">
-      </div>
-      <div class="text1">
-        <span>POWER</span><span>STRICT</span>
-      </div>
-      <div id="turn"></div>
-      <div class="text2">
-        COUNT
-      </div>
-    </div>
-  </div>
 
-  <script  src="js/index.js"></script>
 
+				<div id="play-setting">
+					<div id="game-type">
+						<label class="switch">
+							<input id="strict" type="checkbox">
+							<span class="slider"></span>
+						</label>
+						&nbsp;
+						<button id="start">Start</button>
+					</div>
+					<div id="play-btn">
+						<div id="turn"></div>
+					</div>
+					<div id="power-btn">
+						<label class="switch">
+							<input id="on" type="checkbox">
+							<span class="slider"></span>
+						</label>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+
+
+
+	</div>
 </body>
+<script type="text/javascript" src="JS/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="JS/index.js"></script>
 </html>

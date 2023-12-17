@@ -1,0 +1,181 @@
+html,body{
+	width: 100%;
+	height: 100%;
+
+	padding: 0;
+	margin: 0;
+
+	background-image: url("/Img/112.png");
+	background-size: cover;
+	background-repeat: repeat;
+}
+#main-container{
+	height: 100%;
+	width: 100%;
+
+	font-size: 6px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	
+	backdrop-filter: blur(40px) grayscale(0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#play-block{
+	position: relative;
+	top: 0;
+	left: 0;
+	
+	height: 600px;
+	width: 600px;
+	flex-grow: 0;
+  	flex-shrink: 0;
+
+	border-radius: 50%;
+
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+.quarter-block{
+	height: 50%;
+	width: 50%;
+	display: inline-block;
+
+	border: 2em black solid;
+	box-sizing: border-box;
+}
+#btn-block1{
+	border-radius: 100% 0 0 0; 
+	border-width: 2em 1em 1em 2em; 
+	background-color: red;}
+#btn-block2{
+	border-radius: 0 100% 0 0; 
+	border-width: 2em 2em 1em 1em; 
+	background-color: green;}
+#btn-block3{
+	border-radius: 0 0 0 100%; 
+	border-width: 1em 1em 2em 2em; 
+	background-color: brown;}
+#btn-block4{
+	border-radius: 0 0 100% 0; 
+	border-width: 1em 2em 2em 1em; 
+	background-color: yellow;}
+#menuPanel{
+	background-color: darkgrey;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+
+	height: 48%;
+	width: 48%;
+	transform: translate(-50%,-50%);
+	border-radius: 50%;
+
+	border: 2em black solid;
+	box-sizing: border-box;
+	overflow: hidden;
+	color: white;
+}
+#nameHeader{
+	font-size: 3em;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	border-radius: 100px 100px 0 0;
+}
+.abs{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+#Gamelogo{
+	top: 15%;
+	color: white;
+
+}
+#play-setting{
+	position: absolute;
+	top: 45%;
+	left: 0;
+	height: 60%;
+	width: 100%;
+	font-size: 3em;
+	display: flex;
+	flex-direction: column;
+}
+
+#play-setting>div{
+	display: flex;
+	justify-content: center;
+	margin: 4px 0;
+}
+
+#game-type{
+	position: relative;
+	top: 0;
+	left: 0;
+}
+#play-btn{
+	position: relative;
+	top: 0;
+	left: 0;
+}
+#power-btn{
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.switch{
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+.switch input{ 
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+.slider{
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .1s;
+	transition: .1s;
+}
+.slider:before{
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .1s;
+	transition: .1s;
+}
+  
+input:checked + .slider{
+	background-color: #2196F3;
+}
+  
+input:focus + .slider{
+	box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before{
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
